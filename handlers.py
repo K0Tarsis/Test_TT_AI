@@ -42,9 +42,9 @@ async def conversations(msg: types.Message):
 
     temp_history[msg.from_user.id]['History'] = messages
 
-    if 'System Info Order Conclusion' in reply:
+    if 'System Info Order Conclusion:' in reply:
 
-        conclusion = reply.split('System Info Order Conclusion')[-1]
+        conclusion = reply.split('System Info Order Conclusion:')[-1]
         await msg.answer(LAST_MESSAGE[temp_history[msg.from_user.id]['Language']])
         await msg.answer('Its chatgpt conclusion:\n' + conclusion)
 
