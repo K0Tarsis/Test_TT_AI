@@ -4,7 +4,7 @@ import openai
 from dotenv import load_dotenv
 from gtts import gTTS
 
-from Test_TT_AI.constant import START_CONTENT, AI_INTRODUCTION, LANGUAGES
+from constant import START_CONTENT, AI_INTRODUCTION, LANGUAGES
 
 load_dotenv()
 OPENAI_TOKEN = os.getenv("OPENAI_TOKEN")

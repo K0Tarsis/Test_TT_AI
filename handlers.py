@@ -4,11 +4,10 @@ import time
 from aiogram import types, Dispatcher
 from aiogram.dispatcher.filters import Text
 
-import Test_TT_AI.constant
-from Test_TT_AI import ai_models
-from Test_TT_AI.constant import CHOSE_LANGUAGE_MSG, START_CONTENT, LANGUAGES
-from Test_TT_AI.keyboards import language_keyboard
-from Test_TT_AI.main import bot
+import ai_models
+from constant import CHOSE_LANGUAGE_MSG, START_CONTENT, LANGUAGES
+from keyboards import language_keyboard
+from main import bot
 
 try:
 

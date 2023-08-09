@@ -4,7 +4,7 @@ import pickle
 from dotenv import load_dotenv
 from aiogram import Bot, executor, Dispatcher
 
-from Test_TT_AI import handlers
+import handlers
 
 load_dotenv()
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
