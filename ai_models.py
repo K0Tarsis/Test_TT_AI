@@ -35,7 +35,7 @@ async def voice_chat(user_message: str, user_id: int, user_info: dict = None):
     audio = gTTS(text=reply, lang=language, slow=False)
     audio.save(file_name)
 
-    print(reply)
+    print(messages)
 
     return reply, file_name, messages
 

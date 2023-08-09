@@ -5,7 +5,7 @@ from aiogram import types, Dispatcher
 from aiogram.dispatcher.filters import Text
 
 import ai_models
-from constant import CHOSE_LANGUAGE_MSG, START_CONTENT, LANGUAGES
+from constant import CHOSE_LANGUAGE_MSG, START_CONTENT, LANGUAGES, AI_INTRODUCTION
 from keyboards import language_keyboard
 from main import bot
 
@@ -26,7 +26,7 @@ async def change_language(callback: types.CallbackQuery):
     language = callback.data.split(' ')[-1] if callback.data.split(' ')[-1] in LANGUAGES.keys() else 'en'
     user_id = callback.from_user.id
     temp_history[user_id] = {'Language': language, 'History': None}
-    await bot.send_message(user_id, Test_TT_AI.constant.AI_INTRODUCTION[language])
+    await bot.send_message(user_id, AI_INTRODUCTION[language])
 
 
 async def conversations(msg: types.Message):
