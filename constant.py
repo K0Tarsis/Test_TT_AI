@@ -18,7 +18,7 @@ and if not then tell it to the client. \
 Try to initiate conversation. \
 Speak on that language %s. \
 When you got enough information, then summarize client responses and ask if everything is correct, \
-then if client confirmed order write short conclusion in English languages about client desire \
+then if client confirmed order, write short conclusion in English language about client desire \
 as example '''System Info Conclusion: {your conclusion}'''
     """
 
