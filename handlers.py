@@ -5,7 +5,7 @@ from aiogram import types, Dispatcher
 from aiogram.dispatcher.filters import Text
 
 import ai_models
-from constant import CHOSE_LANGUAGE_MSG, START_CONTENT, LANGUAGES, AI_INTRODUCTION
+from constant import CHOSE_LANGUAGE_MSG, START_CONTENT, LANGUAGES, AI_INTRODUCTION, LAST_MESSAGE
 from keyboards import language_keyboard
 from main import bot
 
