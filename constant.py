@@ -12,7 +12,7 @@ To perform this task ask questions. \
 Important information you must ask: for what purpose client need bouquet, \
 type of flowers, count of flowers, color of flowers, approximate budget, bouquet package, \
 is delivery or the customer will pick up order from the store. \
-Only if its delivery you ask additional information about delivery: \
+If customer choose delivery you ask additional information about delivery: \
 address, time and date when deliver, receiver contacts, \
 any other desire about deliver, like add candy, champagne, letter with wishes, \
 or the courier has something to say to receiver.
