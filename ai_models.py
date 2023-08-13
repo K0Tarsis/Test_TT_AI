@@ -4,7 +4,7 @@ import openai
 from dotenv import load_dotenv
 from gtts import gTTS
 
-from constant import START_CONTENT, AI_INTRODUCTION, LANGUAGES
+from constant import *
 
 load_dotenv()
 OPENAI_TOKEN = os.getenv("OPENAI_TOKEN")
@@ -20,8 +20,8 @@ def gen_start_message(language):
 
 async def voice_chat(user_message: str, user_id: int, user_info: dict = None):
 
-    language = user_info['Language'] if user_info['Language'] else 'en'
-    messages = user_info['History'] if user_info['History'] else gen_start_message(language)
+    language = user_info[LANGUAGE] if user_info[LANGUAGE] else 'en'
+    messages = user_info[HISTORY] if user_info[HISTORY] else gen_start_message(language)
     messages.append({"role": "user", "content": user_message})
 
     chat = openai.ChatCompletion.create(
@@ -31,15 +31,15 @@ async def voice_chat(user_message: str, user_id: int, user_info: dict = None):
     reply = chat.choices[0].message.content
     messages.append({"role": "assistant", "content": reply})
 
-    file_name = f"temp_voice/output_{user_id}.mp3"
+    file_name = TEMP_VOICE_FILES % user_id
     audio = gTTS(text=reply, lang=language, slow=False)
     audio.save(file_name)
 
-    print(messages)
+    print(LOG_MSG % (user_id, user_message, reply))
 
     return reply, file_name, messages
 
-
+# Not necessary, takes a lot of time
 # def define_language(user_message: str):
 #     prompt = f"Tell me what language this is: ```{user_message}```, " \
 #              f"response in format like this '''Language:=uk''' for Ukrainian," \

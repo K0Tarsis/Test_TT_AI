@@ -1,5 +1,5 @@
-CHOSE_LANGUAGE_MSG = '\nPleas choose language between Ukrainian and English\nОберіть мову спілкування'
-
+# Prompts
+# ===========
 START_CONTENT = \
     """
 You are AI sale assistant from the flowers store. \
@@ -23,6 +23,10 @@ then if client confirmed order, write short conclusion about order only in engli
 as example '''System Info Order Conclusion: {your conclusion}'''
     """
 
+# Bot answears
+# ===========
+CHOSE_LANGUAGE_MSG = '\nPleas choose language between Ukrainian and English\nОберіть мову спілкування'
+
 AI_INTRODUCTION = {
     'en': 'Hi, im AI assistant, can i ask you few questions to provide best experience?',
     'uk': 'Привіт, я ШІ асистент, чи можу я задати вам пару запитань для визначення кращого замовлення для вас?'
@@ -33,4 +37,21 @@ LAST_MESSAGE = {
     'uk': 'Ваш заказ прийнятий і відправлений в обробку'
 }
 
+# Languages parameters
+# ===========
 LANGUAGES = {'en': 'English', 'uk': 'Ukrainian'}
+LANGUAGE = 'Language'
+HISTORY = 'History'
+
+# System messages
+# ===========
+SYSTEM_MESSAGE_CONLUSION = 'System Info Order Conclusion:'
+TELEGRAM_SERVERS_ERROR_MSG = 'Python servers error, trying to reconect'
+OTHER_CRITICAL_ERROR_MSG = 'Other critical error, shut down'
+LOG_MSG = 'User id: %s\nUser message: %s\nAi answear: %s'
+
+# Files constant
+# ===========
+TEMP_HISTORY_FILE = 'dict_history.pkl'
+TEMP_VOICE_FILES = 'temp_voice/output_%s.mp3'
+TEMP_VOICE_DIRECTORY = 'temp_voice'
