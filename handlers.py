@@ -53,7 +53,8 @@ async def conversations(msg: types.Message):
             [
                 {"role": "system", "content":
                     START_CONTENT % LANGUAGES[temp_history[msg.from_user.id][LANGUAGE]]},
-                {"role": "system", "content": f"Your previous conclusion about client:\n{reply}"}]
+                {"role": "system", "content": f"Your previous conclusion about client:\n{reply}"}
+            ]
 
     else:
         await msg.answer(reply + f'\nTime for an answer: {time_spent}')
