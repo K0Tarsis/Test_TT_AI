@@ -45,7 +45,7 @@ HISTORY = 'History'
 
 # System messages
 # ===========
-SYSTEM_MESSAGE_CONLUSION = 'System Info Order Conclusion:'
+SYSTEM_MESSAGE_CONCLUSION = 'System Info Order Conclusion:'
 TELEGRAM_SERVERS_ERROR_MSG = 'Python servers error, trying to reconect'
 OTHER_CRITICAL_ERROR_MSG = 'Other critical error, shut down'
 LOG_MSG = 'User id: %s\nUser message: %s\nAi answear: %s'

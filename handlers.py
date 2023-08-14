@@ -43,9 +43,9 @@ async def conversations(msg: types.Message):
 
     temp_history[msg.from_user.id][HISTORY] = messages
 
-    if SYSTEM_MESSAGE_CONLUSION in reply:
+    if SYSTEM_MESSAGE_CONCLUSION in reply:
 
-        conclusion = reply.split(SYSTEM_MESSAGE_CONLUSION)[-1].strip()
+        conclusion = reply.split(SYSTEM_MESSAGE_CONCLUSION)[-1].strip()
         await msg.answer(LAST_MESSAGE[temp_history[msg.from_user.id][LANGUAGE]])
         await msg.answer('Its chatgpt conclusion:\n' + conclusion)
 
